@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    transition: 0.2s;
+}
+
+.Container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Keyboard */
+.keyboard {
+    max-width: 1008px;
+    width: 100%;
+    background-color: #e7e7e7;
+    overflow: hidden;
+    position: relative;
+    order: 2;
+}
+
+.row {
+    display: flex;
+}
+
+.keys {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+    transform: 0.2s;
+    z-index: 6;
+}
+
+.BackSpace {
+    width: 120px;
+}
+
+.Tab {
+    width: 90px;
+}
+
+.Slash {
+    width: 90px;
+}
+
+.CapsLock {
+    width: 128px;
+}
+
+.Enter {
+    width: 120px;
+}
+
+.Shift {
+    width: 124px;
+}
+
+.SpaceBar {
+    max-width: 600px;
+    width: 100%;
+}
+
+.Input {
+    max-width: 1008px;
+    width: 100%;
+    height: 90px;
+    border: none;
+    outline: none;
+    background-color: #f7f7f7;
+    margin-bottom: 30px;
+    font-size: 24px;
+    padding-left: 10px;
+    transition: 0.2s;
+}
+
+.keys.active {
+    background-color: black;
+    color: white;
+}
+
+.keys.remove {
+    animation: RemoveAnim 0.3s forwards;
+}
+
+@keyframes RemoveAnim {
+    0% {
+        background-color: black;
+        color: white;
+    }
+
+    100% {
+        background-color: white;
+        color: black;
+    }
+}
+
+body.active {
+    background-color: rgb(24, 20, 20);
+}
+
+/* NightModeBTN */
+.Night-Mode {
+    width: 80px;
+    height: 30px;
+    background-color: #e6e6e6;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 50px;
+}
+
+.toggleCircle {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(54, 54, 54);
+    border-radius: 50%;
+    margin: 0 5px;
+    position: absolute;
+    left: 0;
+    transition: 0.2s;
+}
+
+.Night-Mode.active {
+    background-color: #222222;
+}
+
+.toggleCircle.active {
+    left: 60%;
+    background-color: white;
+}
+
+.keyboard.active {
+    background-color: rgb(47, 33, 33);
+}
+
+.keys.NightKeys {
+    background-color: #333;
+    color: white;
+}
+
+.Input.active {
+    background-color: #2b2b2b;
+    color: white;
+}
+
+.keys.NightKeys.active {
+    background-color: white;
+    color: #333;
+}
+
+.keys.NightKeys.remove {
+    animation: KeysNightRemove 0.5s forwards;
+}
+
+@keyframes KeysNightRemove {
+    0% {
+        background-color: white;
+        color: black;
+    }
+
+    100% {
+        background-color: #333;
+        color: white;
+    }
+}
+
+.Colors {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    right: 150px;
+    top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ColorInput {
+    width: 100px;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+}
+
+.ColorInput:disabled {
+    opacity: 0.3;
+}
+
+.Colors.night {
+    background-color: #222222;
+}
+
+.KeyboardLights {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+
+/* KeyboardLights Animations */
+.KeyboardLights.Rainbow {
+    background:
+        linear-gradient(90deg in hsl longer hue, red 0 50%) 0/200%;
+    animation: Rainbow 6s linear infinite;
+}
+
+@keyframes Rainbow {
+    to {
+        background-position: 100%
+    }
+}
+
+.KeyboardLights.Pulse {
+    animation: Pulse 3s infinite;
+}
+
+@keyframes Pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+}
+
+.KeyboardLights.RainbowPulse {
+    animation: RainbowPulse 10s infinite;
+}
+
+@keyframes RainbowPulse {
+    0% {
+        background-color: red;
+    }
+
+    15% {
+        background-color: orange;
+    }
+
+    30% {
+        background-color: yellow;
+    }
+
+    46% {
+        background-color: green;
+    }
+
+    62% {
+        background-color: rgb(107, 107, 223);
+    }
+
+    78% {
+        background-color: rgb(166, 77, 166);
+    }
+
+    100% {
+        background-color: purple;
+    }
+}
+
+/* DropDown */
+.Dropdown {
+    min-width: 15em;
+    position: relative;
+    margin: 2em;
+    bottom: 190px;
+}
+
+.Dropdown * {
+    box-sizing: border-box;
+}
+
+.Select {
+    background-color: #e7e7e7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid rgb(192, 153, 153);
+    border-radius: 0.5em;
+    padding: 1em;
+    cursor: pointer;
+}
+
+.Caret {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid rgb(29, 24, 24);
+    transition: 0.3s;
+}
+
+.CaretRotate {
+    transform: rotate(180deg);
+}
+
+.Menu {
+    margin-top: 10px;
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background-color: #c2b7b7;
+    border: 1px solid white;
+    border-radius: 0.5em;
+    color: white;
+    position: absolute;
+    top: 3em;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index: 1;
+}
+
+.Menu li {
+    padding: 0.7em 0.5em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    list-style: none;
+}
+
+.Menu li:hover {
+    background: #836f6f;
+}
+
+.MenuOpen {
+    display: block;
+    opacity: 1;
+}

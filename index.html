@@ -4,8 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keyboard Made By Parham Daneshnejad</title>
+    <link rel="stylesheet" href="CSS/index.css">
 </head>
 <body>
-    
+    <div class="Container">
+        <!-- DropDown -->
+        <div class="Dropdown">
+            <div class="Select">
+              <h10 id="SelectH10">None</h10>
+              <div class="Caret"></div>
+            </div>
+            <div class="Menu" >
+                <ul id="LightUL">
+                  <li class="item" id="RainBowMode">Rainbow Mode</li>
+                  <li class="item" id="PulseMode">Pulse Mode</li>
+                  <li class="item" id="RainbowPulse">Rainbow Pulse Mode</li>
+                  <li class="item" id="None">None</li>
+                </ul>
+              </div>
+          </div>
+          <!-- NightMode -->
+        <div class="Night-Mode">
+            <div class="toggleCircle">
+                
+            </div>
+        </div>
+        <!-- ColorInput -->
+            <div class="ChangeLightColor">
+                <div class="Colors">
+                    <input type="color" class="ColorInput">
+                </div>
+            </div>
+        <!-- Keyboard -->
+        <div class="keyboard">
+            <div class="KeyboardLights"></div>
+            <div class="Keyboard-keys">
+                <div class="row">
+                    <div class="keys">`</div>
+                    <div class="keys">1</div>
+                    <div class="keys">2</div>
+                    <div class="keys">3</div>
+                    <div class="keys">4</div>
+                    <div class="keys">5</div>
+                    <div class="keys">6</div>
+                    <div class="keys">7</div>
+                    <div class="keys">8</div>
+                    <div class="keys">9</div>
+                    <div class="keys">0</div>
+                    <div class="keys">-</div>
+                    <div class="keys">=</div>
+                    <div class="keys BackSpace">Backspace</div>
+                </div>
+                <div class="row">
+                    <div class="keys Tab">Tab</div>
+                    <div class="keys">Q</div>
+                    <div class="keys">W</div>
+                    <div class="keys">E</div>
+                    <div class="keys">R</div>
+                    <div class="keys">T</div>
+                    <div class="keys">Y</div>
+                    <div class="keys">U</div>
+                    <div class="keys">I</div>
+                    <div class="keys">O</div>
+                    <div class="keys">P</div>
+                    <div class="keys">{</div>
+                    <div class="keys">}</div>
+                    <div class="keys Slash">\</div>
+                </div>
+                <div class="row">
+                    <div class="keys CapsLock">Caps Lock</div>
+                    <div class="keys">A</div>
+                    <div class="keys">S</div>
+                    <div class="keys">D</div>
+                    <div class="keys">F</div>
+                    <div class="keys">G</div>
+                    <div class="keys">H</div>
+                    <div class="keys">J</div>
+                    <div class="keys">K</div>
+                    <div class="keys">L</div>
+                    <div class="keys">;</div>
+                    <div class="keys">"</div>
+                    <div class="keys Enter">Enter</div>
+                </div>
+                <div class="row">
+                    <div class="keys Shift ShiftLeft">Shift</div>
+                    <div class="keys">Z</div>
+                    <div class="keys">X</div>
+                    <div class="keys">C</div>
+                    <div class="keys">V</div>
+                    <div class="keys">B</div>
+                    <div class="keys">N</div>
+                    <div class="keys">M</div>
+                    <div class="keys"><</div>
+                    <div class="keys">></div>
+                    <div class="keys">/</div>
+                    <div class="keys">?</div>
+                    <div class="keys Shift ShiftRight">Shift</div>
+                </div>
+                <div class="row">
+                    <div class="keys Ctrl CtrlRight">CTRL</div>
+                    <div class="keys">Win</div>
+                    <div class="keys Alt AltRight">ALT</div>
+                    <div class="keys SpaceBar"></div>
+                    <div class="keys Alt AltLeft">ALT</div>
+                    <div class="keys">FN</div>
+                    <div class="keys Ctrl CtrlLeft">CTRL</div>
+                </div>
+            </div>
+        </div>
+        <!-- Input -->
+        <input type="text" class="Input" placeholder="Click here and start typing">
+    </div>
+    <script src="JS/index.js"></script>
 </body>
 </html>
