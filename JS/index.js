@@ -134,7 +134,7 @@ LightModeUL.addEventListener('click', function (e) {
 
     else if (e.target.id == "None") {
         KeyBoardBG.classList.remove("Rainbow", "Pulse", "RainbowPulse")
-        ColorInput.toggleAttribute('disabled')
+        ColorInput.removeAttribute('disabled')
 
     }
     h10.textContent = e.target.textContent
